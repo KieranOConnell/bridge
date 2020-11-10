@@ -1,0 +1,72 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+abstract class Employee {
+-firstName : String
+-lastName : String
+-gender : Gender
+-age : int
++work() : void
+}
+
+class Developer {
++work() : void
+}
+
+class DeveloperJob {
+-salary : int
++getSalary() : int
++setSalary(salary : int) : void
+}
+
+class Janitor {
++work() : void
+}
+
+class JanitorJob {
+-salary : int
++getSalary() : int
++setSalary(salary : int) : void
+}
+
+class Teacher {
++work() : void
+}
+
+class TeacherJob {
+-salary : int
++getSalary() : int
++setSalary(salary : int) : void
+}
+
+class Doctor {
++work() : void
+}
+
+class DoctorJob {
+-salary : int
++getSalary() : int
++setSalary(salary : int) : void
+}
+
+class Accountant {
++work() : void
+}
+
+class AccountantJob {
+-salary : int
++getSalary() : int
++setSalary(salary : int) : void
+}
+
+Employee <|-- Developer
+Employee <|-- Janitor
+Employee <|-- Teacher
+Employee <|-- Doctor
+Employee <|-- Accountant
+Developer <|-- DeveloperJob
+Janitor <|-- JanitorJob
+Teacher <|-- TeacherJob
+Doctor <|-- DoctorJob
+Accountant <|-- AccountantJob
+@enduml

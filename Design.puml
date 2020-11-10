@@ -59,6 +59,11 @@ class AccountantJob {
 +setSalary(salary : int) : void
 }
 
+enum Gender {
+MALE
+FEMALE
+}
+
 Employee <|-- Developer
 Employee <|-- Janitor
 Employee <|-- Teacher
@@ -69,4 +74,5 @@ Janitor <|-- JanitorJob
 Teacher <|-- TeacherJob
 Doctor <|-- DoctorJob
 Accountant <|-- AccountantJob
+Employee -> Gender : uses
 @enduml

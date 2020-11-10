@@ -5,6 +5,7 @@ public class Developer extends Employee {
 
     @Override
     public void work() {
-        System.out.println("I am working as a developer");
+        System.out.println(getFirstName() + " " + getLastName() + " (" +
+                getGender() + ", " + getAge() + ") is working as a developer");
     }
 }

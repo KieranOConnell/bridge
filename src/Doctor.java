@@ -5,6 +5,7 @@ public class Doctor extends Employee {
 
     @Override
     public void work() {
-        System.out.println("I am working as a doctor");
+        System.out.println(getFirstName() + " " + getLastName() + " (" +
+                getGender() + ", " + getAge() + ") is working as a doctor");
     }
 }

@@ -1,78 +1,85 @@
 @startuml
 skinparam classAttributeIconSize 0
 
-abstract class Employee {
+abstract class employee.Employee {
 -firstName : String
 -lastName : String
--gender : Gender
+-gender : employee.Gender
 -age : int
 +work() : void
 }
 
-class Developer {
+interface job.Job {
 +work() : void
 }
 
-class DeveloperJob {
+class employee.impl.Developer {
++work() : void
+}
+
+class job.impl.DeveloperJob {
 -salary : int
 +getSalary() : int
 +setSalary(salary : int) : void
 }
 
-class Janitor {
+class employee.impl.Janitor {
 +work() : void
 }
 
-class JanitorJob {
+class job.impl.JanitorJob {
 -salary : int
 +getSalary() : int
 +setSalary(salary : int) : void
 }
 
-class Teacher {
+class employee.impl.Teacher {
 +work() : void
 }
 
-class TeacherJob {
+class job.impl.TeacherJob {
 -salary : int
 +getSalary() : int
 +setSalary(salary : int) : void
 }
 
-class Doctor {
+class employee.impl.Doctor {
 +work() : void
 }
 
-class DoctorJob {
+class job.impl.DoctorJob {
 -salary : int
 +getSalary() : int
 +setSalary(salary : int) : void
 }
 
-class Accountant {
+class employee.impl.Accountant {
 +work() : void
 }
 
-class AccountantJob {
+class job.impl.AccountantJob {
 -salary : int
 +getSalary() : int
 +setSalary(salary : int) : void
 }
 
-enum Gender {
+enum employee.Gender {
 MALE
 FEMALE
 }
 
-Employee <|-- Developer
-Employee <|-- Janitor
-Employee <|-- Teacher
-Employee <|-- Doctor
-Employee <|-- Accountant
-Developer <|-- DeveloperJob
-Janitor <|-- JanitorJob
-Teacher <|-- TeacherJob
-Doctor <|-- DoctorJob
-Accountant <|-- AccountantJob
-Employee -> Gender : uses
+job.Job <--* employee.Employee : has a
+employee.Gender <- employee.Employee : uses
+
+employee.Employee <|--- employee.impl.Developer
+employee.Employee <|--- employee.impl.Janitor
+employee.Employee <|--- employee.impl.Teacher
+employee.Employee <|--- employee.impl.Doctor
+employee.Employee <|--- employee.impl.Accountant
+
+job.Job <|--- job.impl.DeveloperJob
+job.Job <|--- job.impl.JanitorJob
+job.Job <|--- job.impl.TeacherJob
+job.Job <|--- job.impl.DoctorJob
+job.Job <|--- job.impl.AccountantJob
 @enduml

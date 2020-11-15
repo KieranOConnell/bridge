@@ -1,3 +1,8 @@
+package employee.impl;
+
+import employee.Employee;
+import employee.Gender;
+
 public class Developer extends Employee {
     public Developer(String firstName, String lastName, Gender gender, int age) {
         super(firstName, lastName, gender, age);

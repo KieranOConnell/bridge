@@ -1,3 +1,8 @@
+package employee.impl;
+
+import employee.Employee;
+import employee.Gender;
+
 public class Janitor extends Employee {
     public Janitor(String firstName, String lastName, Gender gender, int age) {
         super(firstName, lastName, gender, age);

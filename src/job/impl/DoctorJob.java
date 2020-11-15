@@ -1,3 +1,8 @@
+package job.impl;
+
+import employee.Gender;
+import employee.impl.Doctor;
+
 public class DoctorJob extends Doctor {
     private int salary;
 

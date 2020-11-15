@@ -1,3 +1,5 @@
+package employee;
+
 public abstract class Employee {
     //
     private String firstName, lastName;
@@ -58,7 +60,7 @@ public abstract class Employee {
     // toString() method to display employee details
     @Override
     public String toString() {
-        return "Employee{" +
+        return "employee.Employee{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", gender=" + gender +

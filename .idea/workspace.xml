@@ -2,13 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc6eafb5-7906-49d2-975d-785092c1d0c9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/job/Job.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Accountant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accountant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Developer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Developer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Doctor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Janitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Janitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design.puml" beforeDir="false" afterPath="$PROJECT_DIR$/Design.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Accountant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/employee/impl/Accountant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AccountantJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/job/impl/AccountantJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Developer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/employee/impl/Developer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DeveloperJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/job/impl/DeveloperJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/employee/impl/Doctor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DoctorJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/job/impl/DoctorJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/employee/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gender.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Janitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/employee/impl/Janitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JanitorJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/job/impl/JanitorJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/employee/impl/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TeacherJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/job/impl/TeacherJob.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +30,7 @@
         <option value="UML Class" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -50,19 +60,8 @@
   </component>
   <component name="RunManager">
     <configuration name="Driver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Driver" />
+      <option name="MAIN_CLASS_NAME" value="main.Driver" />
       <module name="bridge" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -92,6 +91,8 @@
       <workItem from="1604932653698" duration="12248000" />
       <workItem from="1605011388379" duration="596000" />
       <workItem from="1605020982096" duration="6280000" />
+      <workItem from="1605130781707" duration="3522000" />
+      <workItem from="1605389542948" duration="2161000" />
     </task>
     <servers />
   </component>
@@ -103,10 +104,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1604350654427" />
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1604970388349">
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1605401577280">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1604970388349" />
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1605401577280" />
     <state x="640" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1604437115336">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -115,22 +116,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1604869344686" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1605027509652">
+    <state width="1877" height="190" key="GridCell.Tab.0.bottom" timestamp="1605139219242">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605027509652" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1605027509652">
+    <state width="1877" height="190" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605139219242" />
+    <state width="1877" height="190" key="GridCell.Tab.0.center" timestamp="1605139219242">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605027509652" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1605027509651">
+    <state width="1877" height="190" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605139219242" />
+    <state width="1877" height="190" key="GridCell.Tab.0.left" timestamp="1605139219242">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605027509651" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1605027509652">
+    <state width="1877" height="190" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605139219242" />
+    <state width="1877" height="190" key="GridCell.Tab.0.right" timestamp="1605139219242">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605027509652" />
+    <state width="1877" height="190" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605139219242" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1605020362930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

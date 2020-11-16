@@ -78,4 +78,40 @@ job.Job <|.... job.impl.JanitorJob
 job.Job <|.... job.impl.TeacherJob
 job.Job <|.... job.impl.DoctorJob
 job.Job <|.... job.impl.AccountantJob
+
+note top of employee.Employee
+**Abstraction**
+An abstract class which has a reference
+to the implementation (Job). It is defined by
+its "has a" relationship with the implementation.
+end note
+
+note top of job.Job
+**Implementation**
+An interface which allows for concrete implementations
+to be made which implement the work() method. As the
+Employee and Job hierarchies can vary independently of
+one another due to the Bridge design pattern being
+implemented, the work() method returns a String in this
+instance. Both hierarchies can exist and expand without
+impacting the structure of one another.
+end note
+
+note top of employee.impl
+**Refined/Concrete Abstractions**
+Classes which extend the abstraction (Employee)
+and define the contents of the work() methods
+which allows for the decoupling from the Job
+interface, enabling both hierarchies (bridges)
+to vary independently of one another.
+end note
+
+note top of job.impl
+**Concrete Implementations**
+Concrete subclasses which implement the Job interface.
+These concretions define what is returned from the
+work() method, which is then used in the Employee
+hierarchy to establish the different roles of each
+employee listed in the diagram.
+end note
 @enduml

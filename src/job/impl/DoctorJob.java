@@ -1,13 +1,11 @@
 package job.impl;
 
-import employee.Gender;
-import employee.impl.Doctor;
+import job.Job;
 
-public class DoctorJob extends Doctor {
+public class DoctorJob implements Job {
     private int salary;
 
-    public DoctorJob(String firstName, String lastName, Gender gender, int age, int salary) {
-        super(firstName, lastName, gender, age);
+    public DoctorJob(int salary) {
         this.salary = salary;
     }
 
@@ -17,5 +15,10 @@ public class DoctorJob extends Doctor {
 
     public void setSalary(int salary) {
         this.salary = salary;
+    }
+
+    @Override
+    public String work() {
+        return "doctor, earning €" + getSalary() + " per year";
     }
 }

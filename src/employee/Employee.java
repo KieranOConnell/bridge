@@ -1,7 +1,10 @@
 package employee;
 
+import job.Job;
+
 public abstract class Employee {
-    //
+    // Variable instantiation
+    protected Job job;
     private String firstName, lastName;
     private Gender gender;
     private int age;
@@ -10,11 +13,22 @@ public abstract class Employee {
     public Employee(){}
 
     // Constructor with all arguments
-    public Employee(String firstName, String lastName, Gender gender, int age) {
+    public Employee(Job job, String firstName, String lastName, Gender gender, int age) {
+        this.job = job;
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
         this.age = age;
+    }
+
+    // Getter for job
+    public Job getJob() {
+        return job;
+    }
+
+    // Setter for job
+    public void setJob(Job job) {
+        this.job = job;
     }
 
     // Getter for first name (forename)
@@ -60,8 +74,9 @@ public abstract class Employee {
     // toString() method to display employee details
     @Override
     public String toString() {
-        return "employee.Employee{" +
-                "firstName='" + firstName + '\'' +
+        return "Employee{" +
+                "job=" + job +
+                ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", gender=" + gender +
                 ", age=" + age +

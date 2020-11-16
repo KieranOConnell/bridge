@@ -1,5 +1,5 @@
 package job;
 
 public interface Job {
-    public void work();
+    public String work();
 }

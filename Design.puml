@@ -2,15 +2,16 @@
 skinparam classAttributeIconSize 0
 
 abstract class employee.Employee {
+~job : Job
 -firstName : String
 -lastName : String
--gender : employee.Gender
+-gender : Gender
 -age : int
-+work() : void
+{abstract} +work() : void
 }
 
 interface job.Job {
-+work() : void
++work() : String
 }
 
 class employee.impl.Developer {
@@ -19,8 +20,7 @@ class employee.impl.Developer {
 
 class job.impl.DeveloperJob {
 -salary : int
-+getSalary() : int
-+setSalary(salary : int) : void
++work() : String
 }
 
 class employee.impl.Janitor {
@@ -29,8 +29,7 @@ class employee.impl.Janitor {
 
 class job.impl.JanitorJob {
 -salary : int
-+getSalary() : int
-+setSalary(salary : int) : void
++work() : String
 }
 
 class employee.impl.Teacher {
@@ -39,8 +38,7 @@ class employee.impl.Teacher {
 
 class job.impl.TeacherJob {
 -salary : int
-+getSalary() : int
-+setSalary(salary : int) : void
++work() : String
 }
 
 class employee.impl.Doctor {
@@ -49,8 +47,7 @@ class employee.impl.Doctor {
 
 class job.impl.DoctorJob {
 -salary : int
-+getSalary() : int
-+setSalary(salary : int) : void
++work() : String
 }
 
 class employee.impl.Accountant {
@@ -59,8 +56,7 @@ class employee.impl.Accountant {
 
 class job.impl.AccountantJob {
 -salary : int
-+getSalary() : int
-+setSalary(salary : int) : void
++work() : String
 }
 
 enum employee.Gender {
@@ -77,9 +73,9 @@ employee.Employee <|--- employee.impl.Teacher
 employee.Employee <|--- employee.impl.Doctor
 employee.Employee <|--- employee.impl.Accountant
 
-job.Job <|--- job.impl.DeveloperJob
-job.Job <|--- job.impl.JanitorJob
-job.Job <|--- job.impl.TeacherJob
-job.Job <|--- job.impl.DoctorJob
-job.Job <|--- job.impl.AccountantJob
+job.Job <|.... job.impl.DeveloperJob
+job.Job <|.... job.impl.JanitorJob
+job.Job <|.... job.impl.TeacherJob
+job.Job <|.... job.impl.DoctorJob
+job.Job <|.... job.impl.AccountantJob
 @enduml

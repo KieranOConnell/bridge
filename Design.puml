@@ -2,7 +2,7 @@
 skinparam classAttributeIconSize 0
 
 abstract class employee.Employee {
-~job : Job
+#job : Job
 -firstName : String
 -lastName : String
 -gender : Gender
